@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ user.name }} - CV</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			color: #555;
+			background-color: #F5F5F5;
+		}
+		h1 {
+			font-size: 36px;
+			color: #333;
+			margin-bottom: 5px;
+		}
+		.contact {
+			margin-bottom: 20px;
+		}
+		.contact span {
+			font-weight: bold;
+		}
+		.education, .experience, .skills {
+			margin-bottom: 20px;
+		}
+		.section-title {
+			font-size: 24px;
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		.section-content ul {
+			margin: 0;
+			padding-left: 20px;
+			list-style: square;
+		}
+		.section-content li {
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>{{ user.name }}</h1>
+		<div class="contact">
+			<span>Email:</span> {{ user.email }}<br>
+			<span>Phone:</span> {{ user.phone }}
+		</div>
+	</header>
+	<main>
+		<section class="education">
+			<div class="section-title">Education</div>
+			<div class="section-content">
+				<p>{{ user.education }}</p>
+			</div>
